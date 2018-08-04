@@ -19,8 +19,11 @@ public class ListOfWordsSortedOnLength{
        }
        //System.out.println(words);
        Collections.sort(words, Comparator.comparing(String::length));
-       //words.forEach(System.out::println);
-       System.out.println(words);
+
+       String[] arrOfWords = new String[words.size()];
+       arrOfWords = words.toArray(arrOfWords);
+       for (String x : arrOfWords)
+       System.out.println(x);
 
       }
       catch(Exception exception)
